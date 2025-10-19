@@ -1,16 +1,18 @@
 #load libraries 
 import yfinance as yf  #access historical market data
 import pandas as pd  #data manipulation 
+
 import warnings
 warnings.filterwarnings("ignore")
 
 
 class Trading:
-    def __init__(self, symbol, start_date, end_date):
+    def __init__(self, symbol, start_date, end_date, ):
         self.symbol = symbol
         self.start_date = start_date
         self.end_date = end_date
         self.df = None
+        self.budget = 5000
 
     #Data Acquisition
     def load_data(self):
@@ -41,7 +43,13 @@ class Trading:
 
     # Analytical Insights
     def insights(self):
-        print("Analytical Insights")
+        self.df['rolling_mean_50'] = self.df['Close'].rolling(window=50 , min_periods=1).mean()
+        self.df['rolling_mean_200'] = self.df['Close'].rolling(window=200 , min_periods=1).mean()
+        print('Calculated moving averages moving averages for 50 and 200 days.')
+
+    # Golden Opportunity
+    def opportunity(self):
+        print('Golden Opportunity:')
 
 
 
@@ -51,6 +59,7 @@ class Trading:
         self.load_data()
         self.clean_data()
         self.insights()
+        self.opportunity()
 
 # Example Run
 strategy = Trading("AAPL", "2018-01-01", "2023-12-31")

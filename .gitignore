@@ -1,2 +1,6 @@
-*.ipynb
-clean_terminal.py
+# Ignore everything
+*
+
+# But do NOT ignore these:
+!.gitignore
+!main.py
