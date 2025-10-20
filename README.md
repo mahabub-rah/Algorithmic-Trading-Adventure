@@ -11,7 +11,17 @@ The **Golden Cross strategy** monitors two moving averages:
 
 A **buy signal** is generated when the short-term MA crosses above the long-term MA, aiming to capture upward trends.
 
-### Flow Chart
+## Features
+
+- Fetches historical stock data from Yahoo Finance.  
+- Cleans data by removing duplicates and filling missing values.  
+- Calculates 50-day (MA50) and 200-day (MA200) moving averages.  
+- Implements Golden Cross (buy) and Death Cross (sell) signals.  
+- Simulates trading with portfolio tracking and profit/loss evaluation.  
+- Prints clear buy/sell actions and final performance.  
+
+
+## Project Flow Chart
 ![Flow Chart](flow_chart/diagram.png)
 
 ## Project Structure 
@@ -28,6 +38,7 @@ Clone the repository and install dependencies:
 git clone https://github.com/mahabub-rah/Algorithmic-Trading-Adventure.git
 cd Algorithmic-Trading-Adventure
 pip install -r requirements.txt 
+python golder_cross.py
 
 ```
 ## Testing
