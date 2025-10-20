@@ -37,8 +37,8 @@ Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/mahabub-rah/Algorithmic-Trading-Adventure.git
 cd Algorithmic-Trading-Adventure
-pip install -r requirements.txt 
-python golder_cross.py
+pip install -r requirements.txt
+python golden_cross.py
 
 ```
 ## Testing
